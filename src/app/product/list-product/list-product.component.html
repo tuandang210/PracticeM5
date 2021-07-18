@@ -1,0 +1,30 @@
+<h2>Product list</h2>
+<a class="btn btn-info" (click)="onCreate()">Create</a>
+<br><br>
+<table class="table">
+  <thead class="table-dark">
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th colspan="2">Action</th>
+  </tr>
+  </thead>
+  <tbody class="table-hover">
+  <tr *ngFor="let x of products; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{x.name}}</td>
+    <td>{{x.price}}</td>
+    <td>{{x.description}}</td>
+    <td><a class="btn btn-success" (click)="onEdit()">edit</a></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="6" *ngIf="isCheck"><app-create-product (newProduct)="addItem($event)"></app-create-product></td>
+  </tr>
+  <tr>
+    <td colspan="6" *ngIf="isUpdate"><app-update-product [currentProduct]="currentItem"></app-update-product></td>
+  </tr>
+  </tbody>
+</table>

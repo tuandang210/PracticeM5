@@ -1,0 +1,22 @@
+<form>
+  <table class="table-active">
+    <tr>
+      <th>Name</th>
+      <td><input type="text">{{this.currentProduct.name}}</td>
+    </tr>
+    <tr>
+      <th>Price</th>
+      <td><input type="text" name="price" [(ngModel)]="product.price">{{product.price}}</td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><input type="text" name="description" [(ngModel)]="product.description">{{product.description}}</td>
+    </tr>
+    <tr>
+      <th></th>
+      <th>
+        <button (click)="editProduct(product)" class="btn btn-primary">Update</button>
+      </th>
+    </tr>
+  </table>
+</form>

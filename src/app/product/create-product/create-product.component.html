@@ -1,0 +1,22 @@
+<form>
+  <table class="table-active">
+    <tr>
+      <th>Name</th>
+      <td><input type="text" name="name" [(ngModel)]="product.name"></td>
+    </tr>
+    <tr>
+      <th>Price</th>
+      <td><input type="text" name="price" [(ngModel)]="product.price"></td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><input type="text" name="description" [(ngModel)]="product.description"></td>
+    </tr>
+    <tr>
+      <th></th>
+      <th>
+        <button (click)="addNewItem(product)" class="btn btn-primary">Create</button>
+      </th>
+    </tr>
+  </table>
+</form>
