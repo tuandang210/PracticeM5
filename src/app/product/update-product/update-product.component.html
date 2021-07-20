@@ -1,21 +1,25 @@
 <form>
   <table class="table-active">
     <tr>
+      <th>Id</th>
+      <td><input type="text" name="id" [(ngModel)]="product.id"></td>
+    </tr>
+    <tr>
       <th>Name</th>
-      <td><input type="text">{{this.currentProduct.name}}</td>
+      <td><input type="text" name="name" [(ngModel)]="product.name"></td>
     </tr>
     <tr>
       <th>Price</th>
-      <td><input type="text" name="price" [(ngModel)]="product.price">{{product.price}}</td>
+      <td><input type="text" name="price" [(ngModel)]="product.price"></td>
     </tr>
     <tr>
       <th>Description</th>
-      <td><input type="text" name="description" [(ngModel)]="product.description">{{product.description}}</td>
+      <td><input type="text" name="description" [(ngModel)]="product.description"></td>
     </tr>
     <tr>
       <th></th>
       <th>
-        <button (click)="editProduct(product)" class="btn btn-primary">Update</button>
+        <button class="btn btn-primary">Update</button>
       </th>
     </tr>
   </table>

@@ -7,15 +7,9 @@ import {Product} from '../../model/product';
   styleUrls: ['./update-product.component.css']
 })
 export class UpdateProductComponent implements OnInit {
-  product: Product = {};
-  @Input() currentProduct: Product;
-
+  @Input() product: Product = {};
 
   constructor() {
-  }
-
-  editProduct(value: Product) {
-    this.product = value;
   }
 
   ngOnInit() {
